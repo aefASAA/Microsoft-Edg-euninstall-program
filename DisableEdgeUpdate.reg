@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+; ===========================
+; 禁用 Microsoft Edge 自动更新
+; ===========================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate]
+"AutoUpdateCheckPeriodMinutes"=dword:00000000
+"DisableAutoUpdateChecksCheckboxValue"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\EdgeUpdate]
+"AutoUpdateCheckPeriodMinutes"=dword:00000000
+"DisableAutoUpdateChecksCheckboxValue"=dword:00000001
+
+; 禁用 Edge 更新任务
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\edgeupdate]
+"Start"=dword:00000004
